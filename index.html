@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRAR Web_dev | Templates</title>
+
+    <Style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Josefin+Slab:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,400;1,700;1,900&display=swap');
+        * {
+            font-family: 'Josefin Sans', sans-serif;
+            color: white;
+            text-transform: capitalize;
+        }
+        body {
+            margin: 0;
+            background-color: rgba(24, 24, 24, 1);
+            position: relative;
+        }
+        .background-img {
+            width: 100%;
+            object-fit: cover;
+            height: 100vh;
+            object-position: top;
+            filter: blur(10px);
+        }
+        main {
+            position: absolute;
+            top: 15vh;
+            left: 10%;
+            right: 10%;
+            margin-bottom: 15vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(32, 32, 32);
+            padding: 25px;
+            padding-bottom: 0px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.25);
+            overflow-y: hidden;
+        }
+        
+        @media screen and (max-width: 990px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+        main.clicked {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+        }
+        .thk-text {
+            font-size: 8vw;
+        }
+
+
+        .download-btn {
+            padding: 15px 0px;
+            width: 100%;
+            background-image: linear-gradient(150deg, rgba(145, 15, 204, 1), rgba(252, 185, 42, 1));
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .image-container img {
+            width: 100%;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            border-radius: 2px;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 25px;
+        }
+    </Style>
+</head>
+<body>
+    <img class="background-img" src="images/Personal-portfolio-Website.png" alt="">
+
+    <main>
+        <div class="image-container">
+            <img src="images/thumbnail.png" alt="">
+        </div>
+
+        <div class="text-container">
+        <p class="about-name" style="font-size: 60px; margin-bottom: 20px;">Free template</p>
+        <p class="about-para">this is a personal portfolio website template. <br><br> Given are the key features of this template</p>
+        <ul style="margin-top: 20px; line-height: 20px;">
+          <li><p class="about-bullet1">Easy to Edit</p></li>
+          <li><p class="about-bullet2">No coding Experince Required</p></li>
+          <li><p class="about-bullet3">With Tutorail to Edit </p></li>
+          <li><p class="about-bullet4">Use in anyways you like (Reselling, SMM Posting, Personal Use etc)</p></li>
+        </ul>
+
+        <a target="_blank" href="https://drive.google.com/file/d/1IzxiD__cbf7so2jBygScd1bNzi6uW3qr/view?usp=sharing"><button class="download-btn">Download</button></a>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('.download-btn').addEventListener('click', () => {
+            document.querySelector('main').classList.add('clicked');
+            document.querySelector('main').innerHTML = `<h1 class="thk-text">Thank You!</h1>`;
+        });
+    </script>
+</body>
+</html>
